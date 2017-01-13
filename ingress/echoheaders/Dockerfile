@@ -14,5 +14,7 @@
 
 FROM gcr.io/google_containers/nginx-slim:0.6
 MAINTAINER Prashanth B <beeps@google.com>
+RUN apt-get update
+RUN apt-get -y install iproute2
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD README.md README.md
